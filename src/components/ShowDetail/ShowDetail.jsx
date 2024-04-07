@@ -1,5 +1,11 @@
+import { useNavigate } from "react-router-dom";
 
 const ShowDetail = ({detail}) => {
+    const navigate = useNavigate();
+
+    const handleGoingBack = () => {
+        navigate(-1)
+    }
     const {idMeal, strMeal, strCategory, strArea, strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5, strIngredient6, strIngredient7, strMealThumb, strMeasure1, strMeasure2, strMeasure3, strMeasure4, strMeasure5, strMeasure6, strMeasure7, strInstructions} = detail;
     return (
         <div>
@@ -19,6 +25,10 @@ const ShowDetail = ({detail}) => {
             <p style={{marginRight: "50px", marginLeft: "50px", textAlign: "start"}}>
                 <span style={{fontWeight: "bold"}}>Instruction:</span> {strInstructions}
             </p>
+            <button onClick={handleGoingBack}
+            style={{border: "1px solid green", backgroundColor: "lightgreen", marginBottom: "40px"}}>
+                Go Back
+            </button>
         </div>
     );
 };
