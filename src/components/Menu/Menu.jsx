@@ -4,10 +4,10 @@ const Menu = ({meal}) => {
     const {idMeal, strMeal, strCategory} = meal;
 
     return (
-        <div style={{border: "3px solid violet", margin: "20px", padding: "20px"}}>
-            <p style={{fontSize: "20px"}}>Name: {strMeal}</p>
+        <div style={{border: "3px solid teal", margin: "20px", padding: "20px", borderRadius: "30px"}}>
+            <p style={{fontSize: "20px", fontWeight: "bold"}}>Name: {strMeal}</p>
             <p>{strCategory}</p>
-            <Link to={`/menu/${idMeal}`}>Show Details</Link>
+            <Link to={`/menu/${strMeal}`}>Show Details</Link>
         </div>
     );
 };
